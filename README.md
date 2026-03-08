@@ -9,6 +9,8 @@
 4. **create SLA table:**   สร้าง ตารางข้อมูลที่เเยก column date time ของเเต่ละ process ในการ recruitment เพื่อให้ง่ายต่อการหา SLA 
 5. **create dash board (tableau):**   สร้าง interactive dashboard เพื่อวิเคราะห์ประสิทธิภาพของทีม HR, ค้นหาจุดคอขวด (bottleneck) ใน process recruitment และวิเคราะห์อัตราการจ้างงานสำเร็จของเเต่ละแผนก
 
+![ER Diagram](Er Diagram-1.jpg)
+
 ## Tools Used
 - **Python:**   ใช้สำหรับการจำลองข้อมูล (Faker, Pandas)
 - **SQL:**   ใช้สำหรับการทำ data cleaning and casting 
