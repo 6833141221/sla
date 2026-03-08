@@ -9,7 +9,7 @@
 
 2. **mock data:**    ใช้ `Pandas` และ `Faker` ในการจำลองข้อมูล ใส่ข้อมูลเข้าตาราง เเละเป็นข้อมูลที่จำเป็นต้องผ่านการ cleansing ก่อน เพื่อฝึกทักษะการทำ data cleaning
 
-![โค้ดจำลองข้อมูล](python.py)
+> 📂 *โค้ด Python:* ![โค้ดจำลองข้อมูล](python.py)
 
 4. **data cleansing:**   ทำการ cleansing และ cast ข้อมูลให้สามารถนำไปใช้ในการวิเคราะห์ได้โดยไม่มีปัญหา
 5. **create SLA table:**   สร้าง ตารางข้อมูลที่เเยก column date time ของเเต่ละ process ในการ recruitment เพื่อให้ง่ายต่อการหา SLA 
