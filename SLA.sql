@@ -56,29 +56,38 @@ create table performs(
 	primary key(itv_id,hr_id)
 );
 
+//cleansing ข้อมูล
+update applicant
+set full_name=regexp_replace(trim(full_name),'\s+',' ','g'),
+    email=lower(trim(email));
 
+update department 
+set d_name=trim(d_name)
+
+update job
+set job_type=trim(job_type)
 
 
 //สร้างตารางส่วนนี้เพื่อให้ง่ายต่อการ SLA
 
-WITH RawDates AS (
+with RawDates AS (
 	select
         a.app_id,
-        p.full_name AS candidate_name,
-        d.d_name AS department,
+        p.full_name as candidate_name,
+        d.d_name as department,
         j.job_title,
         a.apply_date,
-        MAX(CASE WHEN s.status_type = 'Screening' THEN s.status_time END) AS screening_date,
-        MAX(CASE WHEN s.status_type = 'Interview' THEN s.status_time END) AS interview_date,
-        MAX(CASE WHEN s.status_type = 'Hired' THEN s.status_time END) AS hired_date
-    FROM application a
-    JOIN applicant p ON a.ssn = p.ssn
-    JOIN job j ON a.job_id = j.job_id
-    JOIN department d ON j.d_id = d.d_id
-    LEFT JOIN status s ON a.app_id = s.app_id
-    GROUP BY a.app_id, p.full_name, d.d_name, j.job_title, a.apply_date
+        MAX(CASE WHEN s.status_type = 'Screening' THEN s.status_time END) as screening_date,
+        MAX(CASE WHEN s.status_type = 'Interview' THEN s.status_time END) as interview_date,
+        MAX(CASE WHEN s.status_type = 'Hired' THEN s.status_time END) as hired_date
+    from application a
+    join applicant p on a.ssn = p.ssn
+    join job j on a.job_id = j.job_id
+    join department d on j.d_id = d.d_id
+    left join status s on a.app_id = s.app_id
+    group by a.app_id, p.full_name, d.d_name, j.job_title, a.apply_date
 )
-SELECT 
+select 
     *,
     DATE_PART('day', screening_date - apply_date) AS sla_apply_to_screen,
     DATE_PART('day', interview_date - screening_date) AS sla_screen_to_interview,
