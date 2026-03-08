@@ -16,5 +16,7 @@
 - **SQL:**   ใช้สำหรับการทำ data cleaning and casting 
 - **Tableau:**   ใช้สำหรับการทำ data visualization and storytelling
 
+![ER Dashboard](Dashboard.png)
+
 ---
 *Dashboard Link: [https://public.tableau.com/app/profile/narawin.chotivit/viz/RecruitmentSLA/Dashboard1?publish=yes]*
