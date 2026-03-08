@@ -11,9 +11,11 @@
 
 > 📂 *โค้ด Python:* ![โค้ดจำลองข้อมูล](python.py)
 
-4. **data cleansing:**   ทำการ cleansing และ cast ข้อมูลให้สามารถนำไปใช้ในการวิเคราะห์ได้โดยไม่มีปัญหา
-5. **create SLA table:**   สร้าง ตารางข้อมูลที่เเยก column date time ของเเต่ละ process ในการ recruitment เพื่อให้ง่ายต่อการหา SLA 
-6. **create dash board (tableau):**   สร้าง interactive dashboard เพื่อวิเคราะห์ประสิทธิภาพของทีม HR, ค้นหาจุดคอขวด (bottleneck) ใน process recruitment และวิเคราะห์อัตราการจ้างงานสำเร็จของเเต่ละแผนก
+> 📂 **โค้ด SQL:** [ดูไฟล์ mcu.sql ได้ที่นี่](./SLA.sql)
+
+3. **data cleansing:**   ทำการ cleansing และ cast ข้อมูลให้สามารถนำไปใช้ในการวิเคราะห์ได้โดยไม่มีปัญหา
+4. **create SLA table:**   สร้าง ตารางข้อมูลที่เเยก column date time ของเเต่ละ process ในการ recruitment เพื่อให้ง่ายต่อการหา SLA 
+5. **create dash board (tableau):**   สร้าง interactive dashboard เพื่อวิเคราะห์ประสิทธิภาพของทีม HR, ค้นหาจุดคอขวด (bottleneck) ใน process recruitment และวิเคราะห์อัตราการจ้างงานสำเร็จของเเต่ละแผนก
 
 ## Tools Used
 - **Python:**   ใช้สำหรับการจำลองข้อมูล (Faker, Pandas)
