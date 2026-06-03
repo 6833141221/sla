@@ -11,7 +11,7 @@
 
 > 📂 **โค้ด SQL:** [ดูไฟล์ python.py ได้ที่นี่](./python.py)
 
-> 📂 **โค้ด SQL:** [ดูไฟล์ mcu.sql ได้ที่นี่](./SLA.sql)
+> 📂 **โค้ด SQL:** [ดูไฟล์ sla.sql ได้ที่นี่](./SLA.sql)
 
 3. **data cleansing:**   ทำการ cleansing และ cast ข้อมูลให้สามารถนำไปใช้ในการวิเคราะห์ได้โดยไม่มีปัญหา
 4. **create SLA table:**   สร้าง ตารางข้อมูลที่เเยก column date time ของเเต่ละ process ในการ recruitment เพื่อให้ง่ายต่อการหา SLA 
